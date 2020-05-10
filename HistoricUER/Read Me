@@ -1,0 +1,37 @@
+#' ==================================================
+#' 
+#' Labour Market Information Council (LMIC)
+#' 
+#'  Load and Combine Historic Unemployment 
+#'     including pre-1976 annual data.
+#'     
+#'  Converts annual data to monthly estimates
+#' 
+#' **************************************************
+#' 
+#' All data from Statistics Canada sources:
+#' 
+#'  Post-war / pre-1976 annual unemployment rate
+#'   available here: 
+#'   https://www150.statcan.gc.ca/n1/pub/75-005-m/75-005-m2016001-eng.htm
+#'   
+#'   
+#'  Pre-war annual unemployment rate is 
+#'   available in figure 1 here: 
+#'   https://www150.statcan.gc.ca/n1/en/pub/75-001-x/1992003/87-eng.pdf?st=bw4sBvDI
+#'   
+#'   To extract data points from the image it was 
+#'    fed into this online system and manually adjusted
+#'    to get a fine grid of points along the blue line
+#'    https://apps.automeris.io/wpd/
+#'    
+#'  These fine points are loaded in this script and then
+#'    converted to annual (month of June) points by taking
+#'    the y-cooridnate closest to a whole number x-coordinate.
+#'   
+#'   Post-1976 data is from the standard LFS table publicly
+#'    available here: 
+#'    https://www150.statcan.gc.ca/n1/en/tbl/csv/14100287-eng.zip
+#'  
+#' 
+#' ======================================================
