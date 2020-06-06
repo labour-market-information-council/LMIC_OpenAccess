@@ -38,11 +38,14 @@
 
 rm(list=ls()); gc() 
 
-lfs_month <- "2020-04" #(YYYY-MM)
+lfs_month <- "2020-05" #(YYYY-MM)
 
-data_dir <- '~/DATA/Codar/LFS' #' folder in which you've downloaded
-                               #' table 14-10-0287 from here:
-    # "https://www150.statcan.gc.ca/n1/en/tbl/csv/14100287-eng.zip"
+# '~/DATA/Codar/LFS' 
+# "R:/DATA/STC/LFS/Main Data/CODAR/Raw Data/" 
+
+data_dir <- #' folder in which you've downloaded
+  "C:/Users/tbonen/Documents/DATA/CANSIM/LFS/Master Files"  #' table 14-10-0287 from here:
+                                                           # "https://www150.statcan.gc.ca/n1/en/tbl/csv/14100287-eng.zip"
 
 
 # Initialization ----------------------------------------------------------
@@ -240,7 +243,7 @@ uer_all_monthly <- rbindlist(list(
                     ), use.names = TRUE)
 setkey(uer_all_monthly, source, month)
 
-fwrite(uer_all_monthly, paste0('Combined_HisotricUER_', lfs_month, '.csv'))
+fwrite(uer_all_monthly, paste0('Combined_HisotricUER', '.csv'))
 #' fwrite(uer_all_monthly, file.path(data_dir, 'Combined_HisotricUER.csv'))
 
 
